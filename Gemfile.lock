@@ -191,7 +191,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  mongoid (= 4)
+  mongoid
   pg
   rails (= 4.2.4)
   rails_12factor
