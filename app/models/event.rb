@@ -17,7 +17,7 @@ class Event
 
   def self.craw
     crawler_script = Rails.root.join('crawler', 'tatenufrn.py')
-    %x(scrapy runspider #{crawler_script} 2>&1)
+    %x(scrapy runspider "#{crawler_script}")
   end
 
 end
