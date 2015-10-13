@@ -1,4 +1,5 @@
 from HTMLParser import HTMLParser
+import os
 
 class MLStripper(HTMLParser):
     def __init__(self):
@@ -21,7 +22,11 @@ class UfrnEventsSpider(scrapy.Spider):
     name = 'UFRNEvents'
     start_urls = ['http://www.sistemas.ufrn.br/portal/PT/evento']
     # start_urls = ['http://blog.scrapinghub.com']
-    client = MongoClient('mongodb://localhost:27017/')
+    if os.environ.get('MONGOLAB_URI'):
+        client = MongoClient(os.environ.get('MONGOLAB_URI'))
+    else:
+        client = MongoClient('mongodb://localhost:27017/')
+
     db = client.tatenufrn
     db.events.remove()
     def parse(self, response):
