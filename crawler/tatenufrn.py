@@ -24,7 +24,7 @@ class UfrnEventsSpider(scrapy.Spider):
     # start_urls = ['http://blog.scrapinghub.com']
     if os.environ.get('MONGOLAB_URI'):
         client = MongoClient(os.environ.get('MONGOLAB_URI'))
-        db.get_default_database()
+        db = client.get_default_database()
     else:
         client = MongoClient('mongodb://localhost:27017/')
         db = client.tatenufrn
