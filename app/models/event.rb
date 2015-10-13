@@ -7,7 +7,8 @@ class Event
   field :end_time, type: Date
   field :address, type: String
   field :radius_trigger, type: Float
-  field :fbeventId, type: String
+  field :fb_event_id, type: String
+  field :html_info, type: String
 
 
   embeds_many :event_rates
