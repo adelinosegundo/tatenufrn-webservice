@@ -1,6 +1,11 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
+  def craw
+    Event.craw
+    redirect_to events_url(format: :json)
+  end
+
   # GET /events
   # GET /events.json
   def index

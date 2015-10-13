@@ -15,4 +15,9 @@ class Event
 
   accepts_nested_attributes_for :event_rates
 
+  def self.craw
+    crawler_script = Rails.root.join('crawler', 'tatenufrn.py')
+    %x(scrapy runspider #{crawler_script} 2>&1)
+  end
+
 end
