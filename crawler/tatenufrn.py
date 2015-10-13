@@ -28,7 +28,7 @@ class UfrnEventsSpider(scrapy.Spider):
         client = MongoClient('mongodb://localhost:27017/')
 
     db = client.tatenufrn
-    db.events.remove()
+    # db.events.remove()
     def parse(self, response):
         for link in response.css('ul.listagem_noticia li a::attr("href")').extract():
             yield scrapy.Request(response.urljoin(link), self.parse_titles)
