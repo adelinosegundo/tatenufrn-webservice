@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def craw
-    Event.craw
+    Event.delay.craw
     redirect_to events_url(format: :json)
   end
 
