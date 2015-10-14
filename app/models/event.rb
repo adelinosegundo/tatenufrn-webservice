@@ -9,6 +9,8 @@ class Event
   field :radius_trigger, type: Float
   field :fb_event_id, type: String
   field :html_info, type: String
+  field :location_x, type: Float
+  field :location_y, type: Float
 
 
   embeds_many :event_rates
