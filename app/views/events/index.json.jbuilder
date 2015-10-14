@@ -3,8 +3,8 @@ json.array!(@events) do |event|
   json.title              event.title.to_s
   json.description        event.description.to_s
   json.imageUrl           event.image.to_s
-  json.startTime          event.start_time.to_s
-  json.endTime            event.end_time.to_s
+  json.startTime          event.start_time.strftime('%s').to_s
+  json.endTime            event.end_time.strftime('%s').to_s
   json.address            event.address.to_s
   json.radiusTrigger      event.radius_trigger.to_f
   json.fbEventId          event.fb_event_id.to_i
