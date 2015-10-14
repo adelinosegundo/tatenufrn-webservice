@@ -12,5 +12,5 @@ json.array!(@events) do |event|
   json.fbEventId          event.fb_event_id.to_i
   json.locX               event.location_x.to_f
   json.locY               event.location_y.to_f
-  json.updatedAt          event.updated_at.strftime('%s').to_i
+  json.updatedAt          event.updated_at.in_time_zone("Brasilia").strftime('%s').to_i
 end

@@ -18,6 +18,7 @@ def strip_tags(html):
 import scrapy
 from datetime import datetime
 from pymongo import MongoClient
+from pytz import timezone
 
 class UfrnEventsSpider(scrapy.Spider):
     name = 'UFRNEvents'
@@ -48,6 +49,7 @@ class UfrnEventsSpider(scrapy.Spider):
             html_info = ' '.join(content.split())
             html_info = strip_tags(html_info)
             event = self.db.events.find_one({"uid":uid})
+            datetime_now = timezone("America/Fortaleza").localize(datetime.now())
             if not event:
                 event = { 
                     "uid": uid, 
@@ -55,8 +57,8 @@ class UfrnEventsSpider(scrapy.Spider):
                     "image":image, 
                     "html_info":html_info, 
                     "accepted": False,
-                    "updated_at": datetime.now(),
-                    "created_at": datetime.now()
+                    "updated_at": datetime_now,
+                    "created_at": datetime_now
                 }
                 self.db.events.insert(event)
                 print "Inserted event: " + uid

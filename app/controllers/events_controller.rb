@@ -6,6 +6,11 @@ class EventsController < ApplicationController
     redirect_to events_url(format: :json)
   end
 
+  def destroy_all
+    Event.destroy_all
+    redirect_to events_url(format: :json)
+  end
+
   # GET /events
   # GET /events.json
   def index
