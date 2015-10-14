@@ -3,8 +3,8 @@ class Event
   field :title, type: String
   field :description, type: String
   field :image, type: String
-  field :start_time, type: Date
-  field :end_time, type: Date
+  field :start_time, type: DateTime
+  field :end_time, type: DateTime
   field :address, type: String
   field :radius_trigger, type: Float
   field :fb_event_id, type: String
