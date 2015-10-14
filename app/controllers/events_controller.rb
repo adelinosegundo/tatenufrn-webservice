@@ -9,7 +9,9 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    date = params[:last_updated]
+    @events = Event.where(:updated_at.gte => date ) if date
+    @events = Event.all unless date
   end
 
   # GET /events/1

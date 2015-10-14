@@ -16,6 +16,7 @@ def strip_tags(html):
     return s.get_data()
 
 import scrapy
+from datetime import datetime
 from pymongo import MongoClient
 
 class UfrnEventsSpider(scrapy.Spider):
@@ -23,8 +24,8 @@ class UfrnEventsSpider(scrapy.Spider):
     start_urls = ['http://www.sistemas.ufrn.br/portal/PT/evento']
     # start_urls = ['http://blog.scrapinghub.com']
     if os.environ.get('MONGOLAB_URI'):
-        client = MongoClient(os.environ.get('MONGOLAB_URI'))
-        db = client.get_default_database()
+        # client = MongoClient(os.environ.get('MONGOLAB_URI'))
+        # db = client.get_default_database()
     else:
         client = MongoClient('mongodb://localhost:27017/')
         db = client.tatenufrn
@@ -48,7 +49,15 @@ class UfrnEventsSpider(scrapy.Spider):
             html_info = strip_tags(html_info)
             event = self.db.events.find_one({"uid":uid})
             if not event:
-                event = { "uid": uid, "title":title, "image":image, "html_info":html_info, "accepted": False }
+                event = { 
+                    "uid": uid, 
+                    "title":title, 
+                    "image":image, 
+                    "html_info":html_info, 
+                    "accepted": False,
+                    "updated_at": datetime.now(),
+                    "created_at": datetime.now()
+                }
                 self.db.events.insert(event)
                 print "Inserted event: " + uid
             index+=1
