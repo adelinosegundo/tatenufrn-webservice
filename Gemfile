@@ -8,6 +8,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 
 gem 'mongoid', '~> 5'
+gem 'mini_magick'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'rails_admin'
 
 gem 'jquery-rails'

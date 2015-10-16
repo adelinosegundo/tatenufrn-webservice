@@ -2,7 +2,7 @@ json.array!(@events) do |event|
   json.id                 event.id.to_s
   json.title              event.title.to_s
   json.description        event.description.to_s
-  json.imageUrl           event.image.to_s
+  json.imageUrl           event.thumb_url
   json.startTime          event.start_time.strftime('%s').to_i if event.start_time
   json.startTime          0 unless event.start_time
   json.endTime            event.end_time.strftime('%s').to_i if event.end_time

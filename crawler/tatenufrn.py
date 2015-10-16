@@ -54,7 +54,7 @@ class UfrnEventsSpider(scrapy.Spider):
                 event = { 
                     "uid": uid, 
                     "title":title, 
-                    "image":image, 
+                    "original_image":image, 
                     "html_info":html_info, 
                     "accepted": False,
                     "updated_at": datetime_now,

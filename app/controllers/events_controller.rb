@@ -1,22 +1,27 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [:show, :edit, :update, :destroy, :accept]
 
   def craw
     Event.delay.craw
-    redirect_to events_url(format: :json)
+    redirect_to events_url
   end
 
   def destroy_all
     Event.destroy_all
-    redirect_to events_url(format: :json)
+    redirect_to events_url
+  end
+
+  def accept
+    @event.accept
+    redirect_to events_url
   end
 
   # GET /events
   # GET /events.json
   def index
     date = params[:last_updated]
-    @events = Event.where(:updated_at.gte => date ) if date
-    @events = Event.all unless date
+    @events = Event.accepted.where(:updated_at.gte => date ) if date
+    @events = Event.accepted unless date
   end
 
   # GET /events/1
