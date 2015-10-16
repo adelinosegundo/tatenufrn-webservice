@@ -16,12 +16,16 @@ class EventsController < ApplicationController
     redirect_to events_url
   end
 
-  # GET /events
-  # GET /events.json
-  def index
+  def retrive_updated
     date = params[:last_updated]
     @events = Event.accepted.where(:updated_at.gte => date ) if date
     @events = Event.accepted unless date
+  end
+
+  # GET /events
+  # GET /events.json
+  def index
+    @events = Event.all
   end
 
   # GET /events/1

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :events do
     get 'craw', on: :collection
     get 'destroy_all', on: :collection
-
+    get 'retrive_updated', on: :collection
     get 'accept', on: :member
   end
   # The priority is based upon order of creation: first created -> highest priority.
