@@ -6,9 +6,9 @@ Rails.application.routes.draw do
       get 'auth/logout'
       resources :events, only: [:index] do
         member do
-          post 'tell_i_am_going'
-          post 'join'
-          post 'rate'
+          get 'tell_i_am_going'
+          get 'join'
+          get 'rate'
         end
       end
     end
