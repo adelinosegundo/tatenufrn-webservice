@@ -15,7 +15,7 @@
     <% @events.each do |event| %>
       <tr>
         <td><%= event.title %></td>
-        <td><%= link_to 'Accept', accept_event_path(event) %></td>
+        <td><%= link_to 'Accept', accept_admin_event_path(event) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -23,9 +23,9 @@
 
 <br>
 
-<%= link_to "CRAW", craw_events_path %>
+<%= link_to "CRAW", craw_admin_events_path %>
 
 <br>
-<%= link_to "DESTROY ALL", destroy_all_events_path %>
+<%= link_to "DESTROY ALL", destroy_all_admin_events_path %>
 
 
