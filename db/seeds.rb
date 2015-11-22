@@ -5,3 +5,24 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+##Events
+
+Event.destroy_all
+5.times do |n|
+  event = Event.create(
+    title: "Event #{n}",
+    description: "This is the event #{n}",
+    original_image: "http://bloggingtips.moneyreigninc.netdna-cdn.com/wp-content/uploads/2014/12/Event-Blogging-Strategies.jpg",
+    start_time: Date.tomorrow,
+    end_time: Date.tomorrow.tomorrow,
+    address: "Some Address",
+    radius_trigger: "5",
+    fb_event_id: nil,
+    html_info: "Some crawled html",
+    location_x: "-23.5477",
+    location_y: "-46.6358",
+    accepted: false
+  )
+  event.accept
+end

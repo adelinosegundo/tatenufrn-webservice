@@ -1,4 +1,4 @@
-class EventsController < ApplicationController
+class Admin::EventsController < Admin::BaseController
   before_action :set_event, only: [:show, :edit, :update, :destroy, :accept]
 
   def craw

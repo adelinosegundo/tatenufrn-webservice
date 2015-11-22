@@ -1,6 +1,7 @@
 class User
   include Mongoid::Document
   field :name, type: String
+  field :login, type: String
 
   embeds_one :event_rate
 
