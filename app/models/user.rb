@@ -3,7 +3,5 @@ class User
   field :name, type: String
   field :login, type: String
 
-  embeds_one :event_rate
-
-  accepts_nested_attributes_for :event_rate
+  has_many :event_users
 end

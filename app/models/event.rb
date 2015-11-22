@@ -17,9 +17,7 @@ class Event
 
   mount_uploader :image, ImageUploader
 
-  embeds_many :event_rates
-
-  accepts_nested_attributes_for :event_rates
+  has_many :event_users
 
   scope :accepted, -> { where(accepted: true) }
 

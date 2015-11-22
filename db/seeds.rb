@@ -26,3 +26,11 @@ Event.destroy_all
   )
   event.accept
 end
+
+User.destroy_all
+5.times do |n|
+    user = User.create(
+        name: "User #{n}",
+        login: "login#{n}"
+    )
+end

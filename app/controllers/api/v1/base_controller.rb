@@ -1,4 +1,5 @@
 class Api::V1::BaseController < ApplicationController
+  ##Config
   before_filter :set_default_response_format
   skip_before_filter :verify_authenticity_token
 
