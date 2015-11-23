@@ -19,3 +19,5 @@
 *.pyc
 
 public/assets
+
+config/initializers/env.rb
