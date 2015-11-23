@@ -9,6 +9,8 @@ Rails.application.routes.draw do
           get 'tell_i_am_going'
           get 'join'
           get 'rate'
+          get 'like'
+          get 'dislike'
         end
       end
     end
