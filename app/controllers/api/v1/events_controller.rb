@@ -1,11 +1,11 @@
 class Api::V1::EventsController < Api::V1::BaseController
   before_filter :set_user
-  before_filter :set_event
+  before_filter :set_event, except: :index
 
   def index
     date = params[:last_updated]
-    @events = Event.accepted.where(:updated_at.gte => date ) if date
-    @events = Event.accepted unless date
+    @events = Event.accepted.upcoming.where(:updated_at.gte => date ) if date
+    @events = Event.accepted.upcoming unless date
   end
 
   def tell_i_am_going

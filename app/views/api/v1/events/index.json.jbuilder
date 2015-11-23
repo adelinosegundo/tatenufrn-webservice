@@ -13,4 +13,5 @@ json.array!(@events) do |event|
   json.locX               event.location_x.to_f
   json.locY               event.location_y.to_f
   json.updatedAt          event.updated_at.in_time_zone("Brasilia").strftime('%s').to_i
+  json.rating             event.rating
 end

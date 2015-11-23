@@ -19,7 +19,17 @@ class Event
 
   has_many :event_users
 
-  scope :accepted, -> { where(accepted: true) }
+  scope :accepted, -> { where( accepted: true ) }
+  scope :upcoming, -> { where( :end_time.gte => DateTime.now ) }
+
+  def rating
+    rated_users = event_users.where(:rate.ne => nil).size
+    if rated_users >= 1
+      event_users.where(:rate.ne => nil).map(&:rate).inject{|sum,x| sum + x } / event_users.where(:rate.ne => nil).size
+    else
+      0.0
+    end
+  end
 
   def self.craw
     crawler_script = Rails.root.join('crawler', 'tatenufrn.py')
