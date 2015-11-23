@@ -76,3 +76,10 @@ event2.accept
 event3.accept
 event4.accept
 
+
+User.destroy_all
+5.times do |n|
+    user = User.create(
+        name: "User #{n}",
+        login: "login#{n}"
+    )

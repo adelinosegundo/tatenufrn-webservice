@@ -17,11 +17,19 @@ class Event
 
   mount_uploader :image, ImageUploader
 
-  embeds_many :event_rates
+  has_many :event_users
 
-  accepts_nested_attributes_for :event_rates
+  scope :accepted, -> { where( accepted: true ) }
+  scope :upcoming, -> { where( :end_time.gte => DateTime.now ) }
 
-  scope :accepted, -> { where(accepted: true) }
+  def rating
+    rated_users = event_users.where(:rate.ne => nil).size
+    if rated_users >= 1
+      event_users.where(:rate.ne => nil).map(&:rate).inject{|sum,x| sum + x } / event_users.where(:rate.ne => nil).size
+    else
+      0.0
+    end
+  end
 
   def self.craw
     crawler_script = Rails.root.join('crawler', 'tatenufrn.py')
