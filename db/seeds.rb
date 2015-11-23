@@ -10,34 +10,33 @@
 
 Event.destroy_all
 
-
 event1 = Event.create(
-    title: "STUNNING EVENT WITH NO MAX TWO ROWS",
-    description: "This is the event!",
-    original_image: "http://bloggingtips.moneyreigninc.netdna-cdn.com/wp-content/uploads/2014/12/Event-Blogging-Strategies.jpg",
-    start_time: DateTime.new(2015, 11, 22, 19, 0, 0),
-    end_time: DateTime.new(2015, 11, 22, 23, 59, 0),
-    address: "Some Address",
-    radius_trigger: "5",
+    title: "II JORNADA DE BIOLOGIA PARASITÁRIA",
+    description: "O evento é realizado pelo Programa de Pós-graduação em Biologia Parasitária da UFRN e tem o objetivo de promover o debate sobre o futuro da pesquisa em doenças emergentes, reemergentes e negligenciadas do Rio Grande do Norte, envolvendo a participação de discentes e docentes da UFRN e pesquisadores de renome internacional.",
+    original_image: "http://conteudo.info.ufrn.br/22716792462874723a643483195ff.jpeg",
+    start_time: DateTime.new(2015, 12, 2, 0, 0, 0),
+    end_time: DateTime.new(2015, 12, 4, 23, 59, 0),
+    address: "Anfiteatro das Aves, Centro de Biociências - UFRN.",
+    radius_trigger: "10",
     fb_event_id: nil,
     html_info: "Some crawled html",
-    location_x: "-23.5477",
-    location_y: "-46.6358",
+    location_x: "-5.8321995",
+    location_y: "-35.2050854",
     accepted: false
 )
 
 event2 = Event.create(
-    title: "EVENT",
-    description: "This is the event!",
+    title: "TATENUFRN, EVERYONE!",
+    description: "This event will show you why tatenufrn is the app of 2016!",
     original_image: "http://www.eventlebanon.com/wp-content/uploads/2014/07/Lesley-and-Andrew-2-5.jpg",
-    start_time: DateTime.new(2015, 11, 22, 22, 30, 0),
-    end_time: DateTime.new(2015, 11, 22, 23, 59, 0),
+    start_time: DateTime.new(2015, 11, 23, 0, 0, 0),
+    end_time: DateTime.new(2015, 11, 23, 23, 59, 0),
     address: "Some Address",
     radius_trigger: "5",
     fb_event_id: nil,
     html_info: "Some crawled html",
-    location_x: "-23.5477",
-    location_y: "-46.6358",
+    location_x: "-5.8321995",
+    location_y: "-35.2050854",
     accepted: false
 )
 
@@ -45,14 +44,14 @@ event3 = Event.create(
     title: "STUNNING EVENT WITH NO MAX TWO ROWS",
     description: "This is the event!",
     original_image: "http://www.eventlebanon.com/wp-content/uploads/2014/07/Lesley-and-Andrew-2-5.jpg",
-    start_time: DateTime.new(2015, 11, 23, 19, 0, 0),
-    end_time: DateTime.new(2015, 11, 23, 23, 59, 0),
+    start_time: DateTime.new(2015, 11, 25, 19, 0, 0),
+    end_time: DateTime.new(2015, 11, 25, 23, 59, 0),
     address: "Some Address",
     radius_trigger: "5",
     fb_event_id: nil,
     html_info: "Some crawled html",
-    location_x: "-23.5477",
-    location_y: "-46.6358",
+    location_x: "-5.8496945",
+    location_y: "-35.200445",
     accepted: false
 )
 
@@ -60,8 +59,8 @@ event4 = Event.create(
     title: "THE EVENT",
     description: "This is the event!",
     original_image: "http://static1.squarespace.com/static/5499ae37e4b044170dcd2f82/55dcc557e4b0525a5670588a/55dcc557e4b0525a5670588b/1440531802033/NOW+LIVE.jpg?format=2500w",
-    start_time: DateTime.new(2015, 11, 24, 19, 0, 0),
-    end_time: DateTime.new(2015, 11, 24, 23, 59, 0),
+    start_time: DateTime.new(2015, 11, 26, 19, 0, 0),
+    end_time: DateTime.new(2015, 11, 26, 23, 59, 0),
     address: "Some Address",
     radius_trigger: "5",
     fb_event_id: nil,
@@ -83,3 +82,4 @@ User.destroy_all
         name: "User #{n}",
         login: "login#{n}"
     )
+end

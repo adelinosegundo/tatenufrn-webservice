@@ -37,7 +37,7 @@ class Event
   end
 
   def thumb_url
-    "http://192.168.0.5:3000" + self.image.thumb.url
+    self.image.thumb.url
   end
 
   def accept
