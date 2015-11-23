@@ -26,6 +26,18 @@ class Api::V1::EventsController < Api::V1::BaseController
     @e.save
   end
 
+  def like
+    @e = @event.event_users.where(user: @user).first_or_create!
+    @e.like = true
+    @e.save
+  end
+
+  def dislike
+    @e = @event.event_users.where(user: @user).first_or_create!
+    @e.like = false
+    @e.save
+  end
+
   private 
     def set_user
       if session.has_key?(:user_id)

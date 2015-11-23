@@ -31,6 +31,10 @@ class Event
     end
   end
 
+  def likes
+    event_users.where(like: true).size
+  end
+
   def self.craw
     crawler_script = Rails.root.join('crawler', 'tatenufrn.py')
     %x(scrapy runspider "#{crawler_script}")
