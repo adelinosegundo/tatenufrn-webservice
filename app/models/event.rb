@@ -29,7 +29,7 @@ class Event
   end
 
   def thumb_url
-    "http://tatenufrn-webservice.herokuapp.com"+self.image.thumb.url
+    "http://192.168.25.2:3000" + self.image.thumb.url
   end
 
   def accept
