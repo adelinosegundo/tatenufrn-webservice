@@ -20,8 +20,8 @@ Event.destroy_all
     radius_trigger: "5",
     fb_event_id: nil,
     html_info: "Some crawled html",
-    location_x: "-23.5477",
-    location_y: "-46.6358",
+    location_x: "-5.8496945",
+    location_y: "-35.200445",
     accepted: false
   )
   event.accept
