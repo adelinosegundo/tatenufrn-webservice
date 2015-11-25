@@ -12,14 +12,14 @@ class Api::V1::EventsController < Api::V1::BaseController
     @event_users = @user.event_users.where(:event.in => Event.accepted.upcoming.map{|e| e.id.to_s })
   end
 
-  def tell_i_am_going
+  def going
     @e = @event.event_users.where(user: @user).first_or_create!
-    @e.told_goind_at = DateTime.now
+    @e.going_at = DateTime.now
     @e.save
     render 'api/v1/events/event_user'
   end
 
-  def join
+  def arrive
     @e = @event.event_users.where(user: @user).first_or_create!
     @e.arrived_at = DateTime.now
     @e.save
