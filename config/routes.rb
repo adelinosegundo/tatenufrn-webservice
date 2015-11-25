@@ -12,6 +12,9 @@ Rails.application.routes.draw do
           get 'like'
           get 'dislike'
         end
+        collection do
+          get 'event_users'
+        end
       end
     end
   end
