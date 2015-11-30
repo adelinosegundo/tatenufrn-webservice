@@ -20,7 +20,7 @@ class Event
   has_many :event_users
 
   scope :accepted, -> { where( accepted: true ) }
-  scope :upcoming, -> { where( :end_time.gte => (DateTime.now.in_time_zone - 1.hour) ) }
+  scope :upcoming, -> { where( :end_time.gte => (DateTime.now.in_time_zone - 3.hour) ) }
 
   def rating
     rated_users = event_users.where(:rate.ne => nil).size
