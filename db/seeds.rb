@@ -20,15 +20,15 @@ event1 = Event.create(
     radius_trigger: "10",
     fb_event_id: nil,
     html_info: "Some crawled html",
-    location_x: "-5.8321995",
-    location_y: "-35.2050854",
+    location_x: "-5.841876",
+    location_y: "-35.2018364",
     accepted: false
 )
 
 event2 = Event.create(
     title: "TATENUFRN, EVERYONE!",
     description: "This event will show you why tatenufrn is the app of 2016!",
-    original_image: "http://www.eventlebanon.com/wp-content/uploads/2014/07/Lesley-and-Andrew-2-5.jpg",
+    original_image: "https://lvs.luxury/wp-content/uploads/2015/05/IMG_1266Porche-event.jpg",
     start_time: DateTime.new(2015, 11, 23, 0, 0, 0),
     end_time: DateTime.new(2015, 11, 23, 23, 59, 0),
     address: "Some Address",
