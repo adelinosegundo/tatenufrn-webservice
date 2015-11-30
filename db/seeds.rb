@@ -20,8 +20,8 @@ event1 = Event.create(
     radius_trigger: "10",
     fb_event_id: nil,
     html_info: "Some crawled html",
-    location_x: "-5.8321995",
-    location_y: "-35.2050854",
+    location_x: "-5.8403551",
+    location_y: "-35.2020027",
     accepted: false
 )
 
@@ -35,8 +35,8 @@ event2 = Event.create(
     radius_trigger: "10",
     fb_event_id: nil,
     html_info: "Some crawled html",
-    location_x: "-5.832101",
-    location_y: "-35.205295",
+    location_x: "-5.832108",
+    location_y: "-35.2058702",
     accepted: false
 )
 
@@ -50,8 +50,8 @@ event3 = Event.create(
     radius_trigger: "10",
     fb_event_id: nil,
     html_info: "Some crawled html",
-    location_x: "-5.8496945",
-    location_y: "-35.200445",
+    location_x: "-5.832135",
+    location_y: "-35.205251",
     accepted: false
 )
 
