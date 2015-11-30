@@ -32,11 +32,11 @@ event2 = Event.create(
     start_time: DateTime.new(2015, 11, 30, 13, 30, 0),
     end_time: DateTime.new(2015, 11, 30, 14, 00, 0),
     address: "Av.Capitão Mor Gouveia, Lagoa Nova, Natal - RN",
-    radius_trigger: "10",
+    radius_trigger: "50",
     fb_event_id: nil,
     html_info: "Some crawled html",
-    location_x: "-5.832108",
-    location_y: "-35.2058702",
+    location_x: "-5.832135",
+    location_y: "-35.205251",
     accepted: false
 )
 
@@ -47,7 +47,7 @@ event3 = Event.create(
     start_time: DateTime.new(2015, 11, 30, 13, 00, 0),
     end_time: DateTime.new(2015, 11, 30, 14, 30, 0),
     address: "Av.Capitão Mor Gouveia, Lagoa Nova, Natal - RN",
-    radius_trigger: "10",
+    radius_trigger: "50",
     fb_event_id: nil,
     html_info: "Some crawled html",
     location_x: "-5.832135",
