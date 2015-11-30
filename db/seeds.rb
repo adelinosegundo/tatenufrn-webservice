@@ -10,66 +10,6 @@
 
 Event.destroy_all
 
-event5 = Event.create(
-    title: "DZ3 Event",
-    description: "This event will show you why tatenufrn is the app of 2016!",
-    original_image: "http://www.eventlebanon.com/wp-content/uploads/2014/07/Lesley-and-Andrew-2-5.jpg",
-    start_time: DateTime.new(2015, 11, 29, 13, 10, 0),
-    end_time: DateTime.new(2015, 11, 29, 14, 30, 0),
-    address: "Some Address",
-    radius_trigger: "5",
-    fb_event_id: nil,
-    html_info: "Some crawled html",
-    location_x: "-5.8496539",
-    location_y: "-35.2004231",
-    accepted: false
-)
-
-event2 = Event.create(
-    title: "TATENUFRN, EVERYONE!",
-    description: "This event will show you why tatenufrn is the app of 2016!",
-    original_image: "http://www.eventlebanon.com/wp-content/uploads/2014/07/Lesley-and-Andrew-2-5.jpg",
-    start_time: DateTime.new(2015, 11, 30, 13, 10, 0),
-    end_time: DateTime.new(2015, 11, 30, 14, 30, 0),
-    address: "Some Address",
-    radius_trigger: "5",
-    fb_event_id: nil,
-    html_info: "Some crawled html",
-    location_x: "-5.8321995",
-    location_y: "-35.2050854",
-    accepted: false
-)
-
-event3 = Event.create(
-    title: "STUNNING EVENT WITH NO MAX TWO ROWS",
-    description: "This is the event!",
-    original_image: "http://www.eventlebanon.com/wp-content/uploads/2014/07/Lesley-and-Andrew-2-5.jpg",
-    start_time: DateTime.new(2015, 12, 1, 19, 0, 0),
-    end_time: DateTime.new(2015, 12, 1, 23, 59, 0),
-    address: "Some Address",
-    radius_trigger: "5",
-    fb_event_id: nil,
-    html_info: "Some crawled html",
-    location_x: "-5.8496945",
-    location_y: "-35.200445",
-    accepted: false
-)
-
-event4 = Event.create(
-    title: "THE EVENT",
-    description: "This is the event!",
-    original_image: "http://static1.squarespace.com/static/5499ae37e4b044170dcd2f82/55dcc557e4b0525a5670588a/55dcc557e4b0525a5670588b/1440531802033/NOW+LIVE.jpg?format=2500w",
-    start_time: DateTime.new(2015, 12, 2, 19, 0, 0),
-    end_time: DateTime.new(2015, 12, 2, 23, 59, 0),
-    address: "Some Address",
-    radius_trigger: "5",
-    fb_event_id: nil,
-    html_info: "Some crawled html",
-    location_x: "-5.8496945",
-    location_y: "-35.200445",
-    accepted: false
-)
-
 event1 = Event.create(
     title: "II JORNADA DE BIOLOGIA PARASITÁRIA",
     description: "O evento é realizado pelo Programa de Pós-graduação em Biologia Parasitária da UFRN e tem o objetivo de promover o debate sobre o futuro da pesquisa em doenças emergentes, reemergentes e negligenciadas do Rio Grande do Norte, envolvendo a participação de discentes e docentes da UFRN e pesquisadores de renome internacional.",
@@ -85,11 +25,39 @@ event1 = Event.create(
     accepted: false
 )
 
+event2 = Event.create(
+    title: "TATENUFRN, EVERYONE!",
+    description: "This event will show you why tatenufrn is the app of 2016!",
+    original_image: "https://lvs.luxury/wp-content/uploads/2015/05/IMG_1266Porche-event.jpg",
+    start_time: DateTime.new(2015, 11, 30, 13, 30, 0),
+    end_time: DateTime.new(2015, 11, 30, 14, 00, 0),
+    address: "Av.Capitão Mor Gouveia, Lagoa Nova, Natal - RN",
+    radius_trigger: "10",
+    fb_event_id: nil,
+    html_info: "Some crawled html",
+    location_x: "-5.832101",
+    location_y: "-35.205295",
+    accepted: false
+)
+
+event3 = Event.create(
+    title: "MOBILE CLASS",
+    description: "Mobile class at UFRN",
+    original_image: "http://www.dailyherald.com/storyimage/DA/20150503/news/150509662/EP/1/1/EP-150509662.jpg&updated=201505030959&MaxW=800&maxH=800&updated=201505030959&noborder",
+    start_time: DateTime.new(2015, 11, 30, 13, 00, 0),
+    end_time: DateTime.new(2015, 11, 30, 14, 30, 0),
+    address: "Av.Capitão Mor Gouveia, Lagoa Nova, Natal - RN",
+    radius_trigger: "10",
+    fb_event_id: nil,
+    html_info: "Some crawled html",
+    location_x: "-5.8496945",
+    location_y: "-35.200445",
+    accepted: false
+)
+
 event1.accept
 event2.accept
 event3.accept
-event4.accept
-event5.accept
 
 User.destroy_all
 
