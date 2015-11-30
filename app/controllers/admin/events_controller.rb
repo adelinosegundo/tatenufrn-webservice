@@ -3,17 +3,17 @@ class Admin::EventsController < Admin::BaseController
 
   def craw
     Event.delay.craw
-    redirect_to events_url
+    redirect_to admin_events_url
   end
 
   def destroy_all
     Event.destroy_all
-    redirect_to events_url
+    redirect_to admin_events_url
   end
 
   def accept
     @event.accept
-    redirect_to events_url
+    redirect_to admin_events_url
   end
 
   def retrive_updated
@@ -77,7 +77,7 @@ class Admin::EventsController < Admin::BaseController
   def destroy
     @event.destroy
     respond_to do |format|
-      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
+      format.html { redirect_to admin_events_url, notice: 'Event was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
